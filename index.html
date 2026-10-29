@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Tarján Vendéglő – napi menü, kiszállítás és rendezvények Hódmezővásárhelyen</title>
+  <meta name="description" content="Tarján Vendéglő, Hódmezővásárhely: napi menü kiszállítással, rendezvények lebonyolítása, és egy hideg korsó sör a barátokkal.">
+  <meta name="theme-color" content="#1F1D1B">
+  <link rel="icon" href="kepek/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/alfa-slab-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Dekoráció: halvány, vibráló lámpafény a háttérben -->
+  <div class="glow" aria-hidden="true">
+    <span class="glow__spot glow__spot--1"></span>
+    <span class="glow__spot glow__spot--2"></span>
+    <span class="glow__spot glow__spot--3"></span>
+  </div>
+
+  <a class="skip-link" href="#menu">Ugrás a napi menühöz</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top" aria-label="Tarján Vendéglő – az oldal teteje">
+        <!-- KITÖLTENDŐ: ideiglenes, saját készítésű logó – egyeztetni kell a tulajdonossal (a Facebook-profilkép valószínűleg stock grafika) -->
+        <svg class="brand__logo" viewBox="0 0 220 64" aria-hidden="true">
+          <g class="ill">
+            <path class="l" d="M22 17c-3-3 3-6 0-9M32 15c-3-3 3-6 0-9M42 17c-3-3 3-6 0-9"/>
+            <circle class="f" cx="32" cy="24" r="3"/>
+            <path class="f" d="M10 45a22 22 0 0 1 44 0z"/>
+            <rect class="f" x="7" y="44" width="50" height="5" rx="2.5"/>
+          </g>
+          <text x="66" y="34" class="brand__name">Tarján</text>
+          <text x="66" y="54" class="brand__sub">Vendéglő</text>
+        </svg>
+      </a>
+      <nav class="site-nav" aria-label="Fő navigáció">
+        <ul>
+          <li><a href="#menu">Napi menü</a></li>
+          <li><a href="#rendezvenyek">Rendezvények</a></li>
+          <li><a href="#korso">Kapcsolat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="hero-title" data-animate>
+      <div class="wrap hero__inner">
+        <p class="hero__place">Hódmezővásárhely</p>
+
+        <div class="hero__stage">
+          <svg class="hero__lid ill" viewBox="0 0 200 124" aria-hidden="true">
+            <circle class="f" cx="100" cy="26" r="9"/>
+            <path class="f" d="M20 112a80 80 0 0 1 160 0z"/>
+            <path class="c" d="M50 94a54 54 0 0 1 30-44"/>
+            <rect class="f" x="8" y="108" width="184" height="12" rx="6"/>
+          </svg>
+          <svg class="hero__steam ill" viewBox="0 0 120 80" aria-hidden="true">
+            <path class="l" pathLength="1" d="M32 76c-12-12 12-20 0-34s12-22 0-36"/>
+            <path class="l" pathLength="1" d="M60 76c-12-12 12-20 0-34s12-22 0-36"/>
+            <path class="l" pathLength="1" d="M88 76c-12-12 12-20 0-34s12-22 0-36"/>
+          </svg>
+          <h1 id="hero-title" class="hero__title">Tarján Vendéglő</h1>
+          <svg class="hero__tray ill" viewBox="0 0 300 20" aria-hidden="true">
+            <rect class="f" x="14" y="4" width="272" height="8" rx="4"/>
+            <path class="l" d="M60 14v4M240 14v4"/>
+          </svg>
+        </div>
+
+        <p class="hero__tags">Napi menü · Kiszállítás · Rendezvények · Hideg sör</p>
+        <p class="hero__lead">Főzünk. Te csak egyél.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--gold" href="#menu">Mi a menü ma?</a>
+          <!-- KITÖLTENDŐ: telefonszám (main.js → INFO.telefon) -->
+          <a class="btn btn--ghost" href="tel:+36620000000" data-tel>Hívj minket</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. NAPI MENÜ & KISZÁLLÍTÁS -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 id="menu-title" class="section__title">Napi menü <span class="amp">&amp;</span> kiszállítás</h2>
+          <p class="section__lead">Hétköznap délben itt a heti menü. Hozzuk is, ha nincs kedved kimozdulni.</p>
+        </header>
+
+        <div class="menu__grid">
+          <div class="card menu-card">
+            <!-- KITÖLTENDŐ: a valódi heti menü (main.js → INFO.hetiMenu). Ez csak mintaszerkezet. -->
+            <p class="sample-tag">Minta – a valódi heti menü ide kerül</p>
+
+            <div class="day-tabs" role="tablist" aria-label="A hét napjai" hidden>
+              <button class="day-tab" role="tab" id="tab-0" aria-controls="nap-0" aria-selected="false" tabindex="-1">Hétfő</button>
+              <button class="day-tab" role="tab" id="tab-1" aria-controls="nap-1" aria-selected="false" tabindex="-1">Kedd</button>
+              <button class="day-tab" role="tab" id="tab-2" aria-controls="nap-2" aria-selected="false" tabindex="-1">Szerda</button>
+              <button class="day-tab" role="tab" id="tab-3" aria-controls="nap-3" aria-selected="false" tabindex="-1">Csütörtök</button>
+              <button class="day-tab" role="tab" id="tab-4" aria-controls="nap-4" aria-selected="false" tabindex="-1">Péntek</button>
+            </div>
+
+            <div class="day-panels">
+              <div class="day-panel" id="nap-0" role="tabpanel" aria-labelledby="tab-0" tabindex="0">
+                <h3 class="day-panel__title">Hétfő</h3>
+                <dl class="dish-list">
+                  <div class="dish"><dt>Leves</dt><dd><span class="ph" data-menu="0.leves">[napi leves]</span></dd></div>
+                  <div class="dish"><dt>„A” menü</dt><dd><span class="ph" data-menu="0.a">[főétel A]</span></dd></div>
+                  <div class="dish"><dt>„B” menü</dt><dd><span class="ph" data-menu="0.b">[főétel B]</span></dd></div>
+                </dl>
+              </div>
+              <div class="day-panel" id="nap-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+                <h3 class="day-panel__title">Kedd</h3>
+                <dl class="dish-list">
+                  <div class="dish"><dt>Leves</dt><dd><span class="ph" data-menu="1.leves">[napi leves]</span></dd></div>
+                  <div class="dish"><dt>„A” menü</dt><dd><span class="ph" data-menu="1.a">[főétel A]</span></dd></div>
+                  <div class="dish"><dt>„B” menü</dt><dd><span class="ph" data-menu="1.b">[főétel B]</span></dd></div>
+                </dl>
+              </div>
+              <div class="day-panel" id="nap-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0">
+                <h3 class="day-panel__title">Szerda</h3>
+                <dl class="dish-list">
+                  <div class="dish"><dt>Leves</dt><dd><span class="ph" data-menu="2.leves">[napi leves]</span></dd></div>
+                  <div class="dish"><dt>„A” menü</dt><dd><span class="ph" data-menu="2.a">[főétel A]</span></dd></div>
+                  <div class="dish"><dt>„B” menü</dt><dd><span class="ph" data-menu="2.b">[főétel B]</span></dd></div>
+                </dl>
+              </div>
+              <div class="day-panel" id="nap-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0">
+                <h3 class="day-panel__title">Csütörtök</h3>
+                <dl class="dish-list">
+                  <div class="dish"><dt>Leves</dt><dd><span class="ph" data-menu="3.leves">[napi leves]</span></dd></div>
+                  <div class="dish"><dt>„A” menü</dt><dd><span class="ph" data-menu="3.a">[főétel A]</span></dd></div>
+                  <div class="dish"><dt>„B” menü</dt><dd><span class="ph" data-menu="3.b">[főétel B]</span></dd></div>
+                </dl>
+              </div>
+              <div class="day-panel" id="nap-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0">
+                <h3 class="day-panel__title">Péntek</h3>
+                <dl class="dish-list">
+                  <div class="dish"><dt>Leves</dt><dd><span class="ph" data-menu="4.leves">[napi leves]</span></dd></div>
+                  <div class="dish"><dt>„A” menü</dt><dd><span class="ph" data-menu="4.a">[főétel A]</span></dd></div>
+                  <div class="dish"><dt>„B” menü</dt><dd><span class="ph" data-menu="4.b">[főétel B]</span></dd></div>
+                </dl>
+              </div>
+            </div>
+
+            <!-- KITÖLTENDŐ: menüár (main.js → INFO.menuar) -->
+            <p class="menu-card__price">Menüár: <span class="ph" data-info="menuar">[ár egyeztetés alatt]</span></p>
+          </div>
+
+          <aside class="card order" aria-labelledby="order-title">
+            <svg class="order__ill ill" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="l steam-s" d="M24 22c-3-3 3-6 0-10M32 20c-3-3 3-6 0-10M40 22c-3-3 3-6 0-10"/>
+              <path class="f" d="M6 34h52c0 13-11 20-26 20S6 47 6 34z"/>
+              <path class="c" d="M14 40c3 5 8 7 14 8"/>
+              <path class="l" d="M22 58h20"/>
+            </svg>
+            <h3 id="order-title" class="order__title">Hogyan rendelhetsz?</h3>
+            <ol class="order__steps">
+              <li>
+                <strong>Hívj fel minket:</strong>
+                <!-- KITÖLTENDŐ: telefonszám -->
+                <a href="tel:+36620000000" data-tel><span class="ph" data-info="telefon">[telefonszám]</span></a>
+              </li>
+              <li>
+                <strong>Rendelés:</strong>
+                <!-- KITÖLTENDŐ: mikortól meddig lehet rendelni -->
+                <span class="ph" data-info="rendelesIdo">[mikortól meddig]</span>
+              </li>
+              <li>
+                <strong>Hova visszük:</strong>
+                <!-- KITÖLTENDŐ: kiszállítási terület -->
+                <span class="ph" data-info="kiszallitasiTerulet">[kiszállítási terület]</span>
+              </li>
+              <li>
+                <strong>Kiszállítás díja:</strong>
+                <!-- KITÖLTENDŐ: kiszállítási díj -->
+                <span class="ph" data-info="kiszallitasiDij">[díj egyeztetés alatt]</span>
+              </li>
+            </ol>
+            <a class="btn btn--gold btn--block" href="tel:+36620000000" data-tel>Rendelek telefonon</a>
+          </aside>
+        </div>
+
+        <!-- Kiszállító robogó animáció -->
+        <svg class="delivery ill" viewBox="0 0 640 130" aria-hidden="true" data-animate>
+          <path class="delivery__road" d="M0 122H640"/>
+          <g class="delivery__house">
+            <path class="f" d="M536 66l44-36 44 36z"/>
+            <rect class="f" x="546" y="62" width="68" height="58"/>
+            <rect class="cut" x="570" y="84" width="20" height="36"/>
+            <rect class="cut" x="596" y="74" width="12" height="12"/>
+          </g>
+          <g class="delivery__box">
+            <rect class="cream" x="568" y="104" width="24" height="16" rx="2"/>
+            <path class="c" d="M568 110h24"/>
+            <path class="l delivery__puff" d="M576 98c-2-2 2-4 0-7M584 98c-2-2 2-4 0-7"/>
+          </g>
+          <g class="delivery__scooter">
+            <rect class="f" x="6" y="52" width="32" height="24" rx="3"/>
+            <path class="c" d="M6 62h32"/>
+            <path class="f" d="M10 96q0-16 18-16h18q10 0 10 10v6z"/>
+            <path class="l" d="M14 96h44l12-26M64 66h16M70 70l8 34"/>
+            <circle class="f" cx="82" cy="76" r="3"/>
+            <g class="delivery__wheel"><circle class="l" cx="22" cy="108" r="12"/><path class="l" d="M22 100v16"/></g>
+            <g class="delivery__wheel"><circle class="l" cx="78" cy="108" r="12"/><path class="l" d="M78 100v16"/></g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 3. RENDEZVÉNYEK -->
+    <section class="section events" id="rendezvenyek" aria-labelledby="events-title">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 id="events-title" class="section__title">A bulit mi intézzük.</h2>
+          <p class="section__lead">Rendezvényt is vállalunk: születésnap, ballagás, céges vacsora, családi ünnep vagy akár tor. Szólj, és összerakjuk veled.</p>
+        </header>
+
+        <ul class="event-cards">
+          <li class="card event-card" data-party>
+            <svg class="event-card__icon ill" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="f flame" d="M32 3c5 6 4 11 0 11s-5-5 0-11z"/>
+              <rect class="f" x="30" y="15" width="4" height="10" rx="1"/>
+              <rect class="f" x="16" y="25" width="32" height="12" rx="3"/>
+              <rect class="f" x="10" y="36" width="44" height="20" rx="3"/>
+              <path class="c" d="M10 44q5 4 11 0t11 0 11 0 11 0"/>
+              <path class="l" d="M6 58h52"/>
+            </svg>
+            <h3 class="event-card__title">Születésnap</h3>
+            <p>Te hozod a társaságot, a többi a mi dolgunk.</p>
+          </li>
+          <li class="card event-card" data-party>
+            <svg class="event-card__icon ill" viewBox="0 0 64 64" aria-hidden="true">
+              <g class="bag">
+                <path class="l" d="M32 4L18 30M32 4l14 26"/>
+                <rect class="f" x="12" y="28" width="40" height="28" rx="5"/>
+                <path class="c" d="M12 38h40M32 38v8"/>
+                <circle class="f" cx="32" cy="4" r="3"/>
+              </g>
+            </svg>
+            <h3 class="event-card__title">Ballagás</h3>
+            <p>Tarisznya le, terítés fel. Jöhet a nagy családi ebéd.</p>
+          </li>
+          <li class="card event-card" data-party>
+            <svg class="event-card__icon ill" viewBox="0 0 64 64" aria-hidden="true">
+              <g class="glass glass--l">
+                <path class="f" d="M12 14h16c0 12-3 20-8 20s-8-8-8-20z"/>
+                <path class="l" d="M20 34v16M14 52h12"/>
+              </g>
+              <g class="glass glass--r">
+                <path class="f" d="M36 14h16c0 12-3 20-8 20s-8-8-8-20z"/>
+                <path class="l" d="M44 34v16M38 52h12"/>
+              </g>
+              <path class="l spark" d="M32 2v6M24 5l3 4M40 5l-3 4"/>
+            </svg>
+            <h3 class="event-card__title">Céges vacsora</h3>
+            <p>Évzáró, csapatvacsora, egy jó koccintás a végén.</p>
+          </li>
+          <li class="card event-card" data-party>
+            <svg class="event-card__icon ill" viewBox="0 0 64 64" aria-hidden="true">
+              <path class="l steam-s" d="M28 12c-2-2 2-4 0-7M36 12c-2-2 2-4 0-7"/>
+              <g class="lid">
+                <circle class="f" cx="32" cy="17" r="2.5"/>
+                <path class="f" d="M18 33a14 14 0 0 1 28 0z"/>
+              </g>
+              <path class="l" d="M6 36h52M12 36v20M52 36v20M10 22v10M54 22v10"/>
+            </svg>
+            <h3 class="event-card__title">Családi ünnep</h3>
+            <p>Keresztelő, évforduló vagy egy nagy közös vacsora.</p>
+          </li>
+        </ul>
+
+        <div class="events__cta">
+          <div class="card events__offer">
+            <p class="events__offer-text">Írd meg, mikor, hány főre és milyen alkalomra. Visszaírunk egy ajánlattal.</p>
+            <!-- KITÖLTENDŐ: e-mail cím (main.js → INFO.email) -->
+            <a class="btn btn--gold" href="mailto:?subject=Aj%C3%A1nlatk%C3%A9r%C3%A9s%20rendezv%C3%A9nyre%20%E2%80%93%20Tarj%C3%A1n%20Vend%C3%A9gl%C5%91" data-mailto>Kérj ajánlatot</a>
+            <p class="events__mail">E-mail: <span class="ph" data-info="email">[e-mail cím]</span></p>
+          </div>
+          <!-- KITÖLTENDŐ: a vendéglő saját fotója (pl. egy rendezvény terítése) -->
+          <figure class="photo-ph">
+            <svg viewBox="0 0 48 48" aria-hidden="true" class="ill"><path class="l" d="M6 16h8l4-6h12l4 6h8v22H6z"/><circle class="l" cx="24" cy="26" r="7"/></svg>
+            <figcaption>Ide kerülnek a vendéglő saját fotói</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. UGORJ BE EGY KORSÓRA + KAPCSOLAT -->
+    <section class="section beer" id="korso" aria-labelledby="beer-title">
+      <div class="wrap">
+        <div class="beer__grid">
+          <div class="beer__text">
+            <h2 id="beer-title" class="section__title">Ugorj be egy korsóra!</h2>
+            <p class="section__lead">Lesz egy hideg korsó is.</p>
+            <p>Ha megszomjaztál a barátaiddal, térj be hozzánk. Egy korsó sör vagy más hűtött ital, egy asztal a haveroknak, és senki nem siettet.</p>
+            <p>Nem puccos hely. Ez az a sarok, ahova délben ebédelni jössz, este meg egy sörre.</p>
+          </div>
+
+          <svg class="mug ill" viewBox="0 0 260 320" aria-hidden="true" data-mug>
+            <defs>
+              <clipPath id="mug-inside">
+                <path d="M44 64h132v204q0 18-18 18H62q-18 0-18-18z"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#mug-inside)">
+              <g class="mug__beer">
+                <rect class="mug__liquid" x="44" y="64" width="132" height="222"/>
+                <circle class="mug__bubble" cx="70" cy="280" r="3"/>
+                <circle class="mug__bubble" cx="96" cy="280" r="2"/>
+                <circle class="mug__bubble" cx="122" cy="280" r="3.5"/>
+                <circle class="mug__bubble" cx="146" cy="280" r="2.5"/>
+                <circle class="mug__bubble" cx="160" cy="280" r="2"/>
+                <circle class="mug__bubble" cx="84" cy="280" r="2.5"/>
+              </g>
+            </g>
+            <path class="l mug__ridge" d="M80 92v164M110 92v164M140 92v164"/>
+            <path class="l" d="M40 60h140v210q0 20-20 20H60q-20 0-20-20z"/>
+            <path class="l" d="M180 100h24q24 0 24 24v80q0 24-24 24h-24M180 122h18q8 0 8 8v70q0 8-8 8h-18"/>
+            <path class="mug__drip" d="M36 62c-5 16-5 36-2 52 1 10 10 10 10 0V62z"/>
+            <path class="mug__foam" d="M34 68c-8-10 0-26 16-22 4-14 24-16 32-6 8-12 28-12 36-2 8-10 28-8 32 4 12-8 32 0 28 16 12 4 8 16-2 14H44c-8 2-14 0-10-4z"/>
+          </svg>
+        </div>
+
+        <div class="contact" id="kapcsolat">
+          <h3 class="contact__title">Itt találsz minket</h3>
+          <dl class="contact__list">
+            <div class="card contact__item">
+              <dt>Cím</dt>
+              <!-- KITÖLTENDŐ: pontos cím (main.js → INFO.cim) -->
+              <dd><span class="ph" data-info="cim">[cím egyeztetés alatt]</span>, Hódmezővásárhely</dd>
+            </div>
+            <div class="card contact__item">
+              <dt>Nyitvatartás</dt>
+              <!-- KITÖLTENDŐ: nyitvatartás (main.js → INFO.nyitvatartas) -->
+              <dd><span class="ph" data-info="nyitvatartas">[nyitvatartás egyeztetés alatt]</span></dd>
+            </div>
+            <div class="card contact__item">
+              <dt>Telefon</dt>
+              <!-- KITÖLTENDŐ: telefonszám -->
+              <dd><a href="tel:+36620000000" data-tel><span class="ph" data-info="telefon">[telefonszám]</span></a></dd>
+            </div>
+          </dl>
+          <div class="contact__actions">
+            <a class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=Tarj%C3%A1n%20Vend%C3%A9gl%C5%91%20H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely" target="_blank" rel="noopener" data-maps>Útvonal <span class="visually-hidden">(új lapon nyílik)</span></a>
+            <a class="btn btn--ghost" href="https://www.facebook.com/p/Tarj%C3%A1n-Vend%C3%A9gl%C5%91-61561657674994/" target="_blank" rel="noopener">Facebook <span class="visually-hidden">(új lapon nyílik)</span></a>
+          </div>
+          <!-- KITÖLTENDŐ: a vendéglő saját fotója (pl. a terem, a pult, a csapolt sör) -->
+          <figure class="photo-ph photo-ph--wide">
+            <svg viewBox="0 0 48 48" aria-hidden="true" class="ill"><path class="l" d="M6 16h8l4-6h12l4 6h8v22H6z"/><circle class="l" cx="24" cy="26" r="7"/></svg>
+            <figcaption>Ide kerülnek a vendéglő saját fotói</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="site-footer__name">Tarján Vendéglő</p>
+      <p class="site-footer__credit">Mintaoldal – készítette: NoForm Project</p>
+    </div>
+  </footer>
+
+  <!-- Fix alsó sáv mobilon -->
+  <nav class="quickbar" aria-label="Gyors elérés">
+    <a href="tel:+36620000000" data-tel><span aria-hidden="true">📞</span> Hívás</a>
+    <a href="#menu"><span aria-hidden="true">🍽</span> Mai menü</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Tarj%C3%A1n%20Vend%C3%A9gl%C5%91%20H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely" target="_blank" rel="noopener" data-maps><span aria-hidden="true">📍</span> Útvonal</a>
+  </nav>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
